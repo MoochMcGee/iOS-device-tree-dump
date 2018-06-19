@@ -1,6 +1,8 @@
-CFLAGS=-Wall -O2
+CFLAGS=-g
+LIBS=-lssl -lcrypto
 
-all: dtdump
+all:
+	gcc $(CFLAGS) dtdump.c -o dtdump $(LIBS)
 
 clean:
 	rm dtdump
